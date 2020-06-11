@@ -18,6 +18,7 @@ RUN apt-get update && \
     iputils-ping \
     iproute2 \
     pulseaudio-utils \
+    ffmpeg \
     && apt-get clean
 
 # Download and install LMS

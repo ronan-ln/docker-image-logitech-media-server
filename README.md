@@ -80,7 +80,13 @@ Enable Pulseaudio UNIX socket on the host
 
 When running the container, link the socket through a volume
 
-    -v /tmp/pulseaudio.socket:/tmp/pulseaudio.socket \
+    -v /tmp/pulseaudio.socket:/tmp/pulseaudio.socket
+
+## File conversion (custom-convert.conf)
+It is possible to define custom commands for the conversion of file types (Settings/Advanced/File Types) and to redefine existing ones. 
+To do this, create a `custom-convert.conf` file and mount it to your container by adding this volume directive (assuming the file is in the current working directory).
+
+    -v $PWD/custom-convert.conf:/etc/squeezeboxserver/custom-convert.conf 
 
 ## Build Status
 
